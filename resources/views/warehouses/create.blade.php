@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <h1 class="title">Create Warehouse</h1>
+    <h1 class="title">Unesite informacije o skladištu</h1>
 
     @include('message')
 
@@ -9,7 +9,7 @@
         @csrf
 
         <div class="field">
-            <label for="name" class="label">Warehouse Name</label>
+            <label for="name" class="label">Naziv skladišta</label>
 
             <div class="control">
                 <input type="text" name="name" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" value="{{ old('name') }}" required>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="field">
-            <label for="address" class="label">Address</label>
+            <label for="address" class="label">Adresa</label>
 
             <div class="control">
                 <input type="text" name="address" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" value="{{ old('address') }}" required>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="field">
-            <label for="city" class="label">City</label>
+            <label for="city" class="label">Grad</label>
 
             <div class="control">
                 <input type="text" name="city" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" value="{{ old('city') }}" required>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="field">
-            <label for="phone" class="label">Phone</label>
+            <label for="phone" class="label">Telefon</label>
 
             <div class="control">
                 <input type="number" name="phone" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" value="{{ old('phone') }}" required>
@@ -42,7 +42,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Create A New Warehouse</button>
+                <button type="submit" class="button is-link">Unesi skladište</button>
             </div>
         </div>
     </form>

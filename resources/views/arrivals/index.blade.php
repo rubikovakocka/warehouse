@@ -1,19 +1,19 @@
 @extends('layout')
 
 @section('content')
-    <br><br><h1 class="title">Arrivals</h1>
+    <br><br><h1 class="title">Dostave</h1>
 
     @include('message')
 
     <br>
     <div class="displayItems" style="color: #9d0006">
-        <div class="arrivalDate">Arrival Date</div>
-        <div class="arrivalStock">Arrival Stock</div>
-        <div class="expireDate">Expire Date</div>
-        <div class="product">Product</div>
-        <div class="supplier">Supplier</div>
-        <div class="employee">Employee</div>
-        <div class="warehouse">Warehouse</div>
+        <div class="arrivalDate">Datum dospeća</div>
+        <div class="arrivalStock">Zaliha</div>
+        <div class="expireDate">Rok isticanja</div>
+        <div class="product">Proizvod</div>
+        <div class="supplier">Dobavljač</div>
+        <div class="employee">Zaposleni</div>
+        <div class="warehouse">Skladište</div>
     </div>
 
     @foreach($arrival as $item)

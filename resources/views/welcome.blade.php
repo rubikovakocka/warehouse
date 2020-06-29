@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Warehouse</title>
+        <title>Magacinko</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -73,27 +73,27 @@
                 @if (Route::has('login'))
                     <div class="top-right links" style="text-align: right">
                         @auth
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a href="{{ url('/home') }}">Statistika</a>
                             @if (Route::has('register') && request()->user()->hasRole('admin'))
-                                <a href="{{ route('register') }}">Register</a>
+                                <a href="{{ route('register') }}">Registracija</a>
                             @endif
                         @else
-                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('login') }}">Prijava</a>
                         @endauth
                     </div>
                 @endif
 
                 <div class="title m-b-md">
-                    Warehouse
+                    {{ config('app.name', 'Magacinko') }}
                 </div>
 
                 <div class="links">
-                    <a href="/products">Products</a>
-                    <a href="/categories">Categories</a>
-                    <a href="/suppliers">Suppliers</a>
-                    <a href="/warehouses">Warehouses</a>
-                    <a href="/employees">Employees</a>
-                    <a href="/arrivals">Arrivals</a>
+                    <a href="/products">Proizvodi</a>
+                    <a href="/categories">Kategorije</a>
+                    <a href="/suppliers">Dobavljači</a>
+                    <a href="/warehouses">Skladišta</a>
+                    <a href="/employees">Zaposleni</a>
+                    <a href="/arrivals">Dostava Robe</a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <br><h1 class="title">Edit Category</h1>
+    <br><h1 class="title">Izmeni kategoriju</h1>
 
     @include('message')
 
@@ -10,7 +10,7 @@
         @csrf
 
         <div class="field">
-            <label for="name" class="label">Name of Category</label>
+            <label for="name" class="label">Naziv</label>
 
             <div class="control">
                 <input type="text" name="name" class="input" value="{{ $category->name }}">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="field">
-            <label for="description" class="label">Description</label>
+            <label for="description" class="label">Opus</label>
 
             <div class="control">
                 <textarea name="description" class="textarea">{{ $category->description }}</textarea>
@@ -27,7 +27,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Update category</button>
+                <button type="submit" class="button is-link">Izmeni</button>
             </div>
         </div>
     </form>
@@ -39,7 +39,7 @@
         <br>
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Delete Product</button>
+                <button type="submit" class="button is-link">Obriši kategoriju</button>
             </div>
         </div>
     </form>

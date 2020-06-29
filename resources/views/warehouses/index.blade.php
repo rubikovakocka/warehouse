@@ -2,14 +2,14 @@
 
 @section('content')
 
-    <br><br><h1 class="title">Warehouses</h1>
+    <br><br><h1 class="title">Skladišta</h1>
 
     <br>
     <div class="displayItems" style="color: #9d0006">
-        <div class="name">Name</div>
-        <div class="address">Address</div>
-        <div class="city">City</div>
-        <div class="phone">Phone</div>
+        <div class="name">Ime</div>
+        <div class="address">Adresa</div>
+        <div class="city">Grad</div>
+        <div class="phone">Telefon</div>
     </div>
     <br>
     <ol>

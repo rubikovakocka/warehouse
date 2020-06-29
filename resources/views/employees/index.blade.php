@@ -2,16 +2,16 @@
 
 @section('content')
 
-    <br><br><h1 class="title">Employees</h1>
+    <br><br><h1 class="title">Zaposleni</h1>
 
     @include('message')
     <br>
 
     <div class="displayItems" style="color: #9d0006">
-        <div class="name">Name</div>
-        <div class="age">Age</div>
-        <div class="description">Job Description</div>
-        <div class="warehouse">Warehouse</div>
+        <div class="name">Ime i prezime</div>
+        <div class="age">Broj godina</div>
+        <div class="description">Opis posla</div>
+        <div class="warehouse">Skladište</div>
     </div>
     <br>
     @foreach($employee as $item)

@@ -4,13 +4,13 @@
 
     @include('message')
 
-    <h1 class="title">Create Employee</h1>
+    <h1 class="title">Unesi zaposlenog</h1>
 
     <form method="POST" action="/employees">
         @csrf
 
         <div class="field">
-            <label for="name" class="label">Employee Name</label>
+            <label for="name" class="label">Ime i prezime</label>
 
             <div class="control">
                 <input type="text" name="name" class="input {{ $errors->has('title') ? 'is-danger' : '' }}"
@@ -19,7 +19,7 @@
         </div>
 
         <div class="field">
-            <label for="age" class="label">Age</label>
+            <label for="age" class="label">Broj godina</label>
 
             <div class="control">
                 <input type="number" name="age" class="input {{ $errors->has('title') ? 'is-danger' : '' }}"
@@ -28,7 +28,7 @@
         </div>
 
         <div class="field">
-            <label for="job_description" class="label">Job Description</label>
+            <label for="job_description" class="label">Opis posla</label>
 
             <div class="control">
                 <input type="text" name="job_description" class="input {{ $errors->has('title') ? 'is-danger' : '' }}"
@@ -37,7 +37,7 @@
         </div>
 
         <div class="field">
-            <label for="warehouse_id" class="label">Choose Warehouse</label>
+            <label for="warehouse_id" class="label">Skladište</label>
 
             <div class="select">
                 <select name="warehouse_id">
@@ -50,7 +50,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Create A New Employee</button>
+                <button type="submit" class="button is-link">Unesi</button>
             </div>
         </div>
     </form>

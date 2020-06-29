@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <br><h1 class="title">Edit Warehouse</h1>
+    <br><h1 class="title">Izmenite informacije o skladištu</h1>
 
     @include('message')
 
@@ -10,7 +10,7 @@
         @csrf
 
         <div class="field">
-            <label for="name" class="label">Name of Warehouse</label>
+            <label for="name" class="label">Naziv skladišta</label>
 
             <div class="control">
                 <input type="text" name="name" class="input" value="{{ $warehouse->name }}">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="field">
-            <label for="address" class="label">Address</label>
+            <label for="address" class="label">Adresa</label>
 
             <div class="control">
                 <input type="text" name="address" class="input" value="{{ $warehouse->address }}">
@@ -26,7 +26,7 @@
         </div>
 
         <div class="field">
-            <label for="city" class="label">City</label>
+            <label for="city" class="label">Grad</label>
 
             <div class="control">
                 <input type="text" name="city" class="input" value="{{ $warehouse->city }}">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="field">
-            <label for="phone" class="label">Phone</label>
+            <label for="phone" class="label">Telefon</label>
 
             <div class="control">
                 <input type="text" name="phone" class="input" value="{{ $warehouse->phone }}">
@@ -43,7 +43,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Update Warehouse</button>
+                <button type="submit" class="button is-link">Izmeni skladište</button>
             </div>
         </div>
     </form>
@@ -55,7 +55,7 @@
         <br>
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Delete Warehouse</button>
+                <button type="submit" class="button is-link">Obriši skladište</button>
             </div>
         </div>
     </form>

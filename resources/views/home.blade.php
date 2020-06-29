@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Statistics</div>
+                    <div class="card-header">Statistika</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,8 +14,8 @@
                             </div>
                         @endif
 
-                        <p style="font-size: 1.8em; font-weight: bold; text-align: center">Welcome!</p>
-                        <p style="text-align: center; text-decoration: underline; font-weight: bold">This is our statistics</p>
+                        <p style="font-size: 1.8em; font-weight: bold; text-align: center">Dobrodošli!</p>
+                        <p style="text-align: center; text-decoration: underline; font-weight: bold">Ovo je statistika tokom proteklih godina i tokom proteklih meseci</p>
 
                         <div style="margin-top: 20px;">
                             {!! $monthChart->container()  !!}

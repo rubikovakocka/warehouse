@@ -6,5 +6,5 @@
         </select>
     </div>
 
-    <input type="radio" name="sort" value="asc" checked>ASC
-    <input type="radio" name="sort" value="desc">DESC
+    <input type="radio" name="sort" value="asc" checked>Rastuće
+    <input type="radio" name="sort" value="desc">Opadajuće

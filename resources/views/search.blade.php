@@ -11,8 +11,8 @@
             @include('sort')
             <br><br>
 
-            <input type="text" class="input is-hovered is-rounded" name="search" placeholder="Search..." style="width: 240px;" value="{{ !empty($oldValues['search']) ? $oldValues['search'] : '' }}">
-            <button type="submit" class="button is-dark is-rounded">Search</button>
+            <input type="text" class="input is-hovered is-rounded" name="search" placeholder="Pretraži..." style="width: 240px;" value="{{ !empty($oldValues['search']) ? $oldValues['search'] : '' }}">
+            <button type="submit" class="button is-dark is-rounded">Pretraga</button>
         </form>
     @endif
 </div>

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <br><h1 class="title">Edit Product</h1>
+    <br><h1 class="title">Izmenite informacije proizvoda</h1>
 
     @include('message')
 
@@ -10,7 +10,7 @@
         @csrf
 
         <div class="field">
-            <label for="name" class="label">Name of Product</label>
+            <label for="name" class="label">Naziv proizvoda</label>
 
             <div class="control">
                 <input type="text" name="name" class="input" value="{{ $product->name }}">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="field">
-            <label for="description" class="label">Description</label>
+            <label for="description" class="label">Opis</label>
 
             <div class="control">
                 <textarea name="description" class="textarea">{{ $product->description }}</textarea>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="field">
-            <label for="stock" class="label">Stock</label>
+            <label for="stock" class="label">Zaliha</label>
 
             <div class="control">
                 <input type="number" name="stock" class="input" value="{{ $product->stock }}">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="field">
-            <label for="price" class="label">Price</label>
+            <label for="price" class="label">Cena</label>
 
             <div class="control">
                 <input type="number" name="price" class="input" value="{{ $product->price }}">
@@ -42,7 +42,7 @@
         </div>
 
         <div class="field">
-            <label for="price" class="label">Category</label>
+            <label for="price" class="label">Kategorija</label>
 
             <div class="select">
                 <select name="category_id">
@@ -56,7 +56,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Update product</button>
+                <button type="submit" class="button is-link">Izmeni</button>
             </div>
         </div>
     </form>
@@ -68,7 +68,7 @@
         <br>
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Delete Product</button>
+                <button type="submit" class="button is-link">Obriši proizvod</button>
             </div>
         </div>
     </form>

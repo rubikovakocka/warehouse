@@ -2,17 +2,17 @@
 
 @section('content')
 
-    <br><br><h1 class="title">Products</h1>
+    <br><br><h1 class="title">Proizvodi</h1>
 
     @include('message')
 
     <br>
     <div class="displayItems" style="color: #9d0006">
-        <div class="name">Name</div>
-        <div class="description">Description</div>
-        <div class="stock">Stock</div>
-        <div class="price">Price</div>
-        <div class="category">Category</div>
+        <div class="name">Naziv</div>
+        <div class="description">Opis</div>
+        <div class="stock">Zaliha</div>
+        <div class="price">Cena</div>
+        <div class="category">Kategorija</div>
     </div> <br>
 
     @foreach($product as $item)

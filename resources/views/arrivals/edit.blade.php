@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <br><h1 class="title">Edit Arrival Data</h1>
+    <br><h1 class="title">Izmeni informacije o dostavi</h1>
 
     @include('message')
 
@@ -10,7 +10,7 @@
         @csrf
 
         <div class="field">
-            <label for="arrival_date" class="label">Arrival Date</label>
+            <label for="arrival_date" class="label">Datum dospeća</label>
 
             <div class="control">
                 <input type="date" name="arrival_date" class="input" value="{{ $arrival->arrival_date }}">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="field">
-            <label for="arrival_stock" class="label">Arrival Stock</label>
+            <label for="arrival_stock" class="label">Zaliha</label>
 
             <div class="control">
                 <input type="number" name="arrival_stock" class="input" value="{{ $arrival->arrival_stock }}">
@@ -26,7 +26,7 @@
         </div>
 
         <div class="field">
-            <label for="expire_date" class="label">Expire Date</label>
+            <label for="expire_date" class="label">Datum isteka roka trajanja</label>
 
             <div class="control">
                 <input type="date" name="expire_date" class="input" value="{{ $arrival->expire_date }}">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="field">
-            <label for="product_id" class="label">Product</label>
+            <label for="product_id" class="label">Proizvod</label>
 
             <div class="select">
                 <select name="product_id">
@@ -47,7 +47,7 @@
         </div>
 
         <div class="field">
-            <label for="supplier_id" class="label">Supplier</label>
+            <label for="supplier_id" class="label">Dobavljač</label>
 
             <div class="select">
                 <select name="supplier_id">
@@ -60,7 +60,7 @@
         </div>
 
         <div class="field">
-            <label for="employee_id" class="label">Employee</label>
+            <label for="employee_id" class="label">Zaposleni</label>
 
             <div class="select">
                 <select name="employee_id">
@@ -73,7 +73,7 @@
         </div>
 
         <div class="field">
-            <label for="warehouse_id" class="label">Warehouse</label>
+            <label for="warehouse_id" class="label">Skladište</label>
 
             <div class="select">
                 <select name="warehouse_id">
@@ -88,7 +88,7 @@
         <br>
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Update Arrival Data</button>
+                <button type="submit" class="button is-link">Izmeni</button>
             </div>
         </div>
     </form>
@@ -100,7 +100,7 @@
         <br>
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Delete Arrival Data</button>
+                <button type="submit" class="button is-link">Obriši dostavu</button>
             </div>
         </div>
     </form>

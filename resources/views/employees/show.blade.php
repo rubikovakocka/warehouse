@@ -10,6 +10,6 @@
     </div>
 
     <div style="padding: 25px;">
-        <button type="button" class="button is-link" onclick="window.location='/employees/{{$employee->id}}/edit'">Edit</button>
+        <button type="button" class="button is-link" onclick="window.location='/employees/{{$employee->id}}/edit'">Izmeni</button>
     </div>
 @endsection

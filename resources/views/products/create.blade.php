@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <h1 class="title">Create Product</h1>
+    <h1 class="title">Unesite podatke o proizvodu</h1>
 
     @include('message')
 
@@ -9,7 +9,7 @@
         @csrf
 
         <div class="field">
-            <label for="name" class="label">Product Name</label>
+            <label for="name" class="label">Naziv proizvoda</label>
 
             <div class="control">
                 <input type="text" name="name" class="input {{ $errors->has('name') ? 'is-danger' : '' }}" value="{{ old('name') }}">
@@ -17,7 +17,7 @@
         </div>
 
         <div class="field">
-            <label for="description" class="label">Description</label>
+            <label for="description" class="label">Opis</label>
 
             <div class="control">
                 <textarea name="description" class="textarea {{ $errors->has('description') ? 'is-danger' : '' }}"
@@ -26,7 +26,7 @@
         </div>
 
         <div class="field">
-            <label for="price" class="label">Price</label>
+            <label for="price" class="label">Cena</label>
 
             <div class="control">
                 <input type="number" name="price" class="input {{ $errors->has('price') ? 'is-danger' : '' }}" value="{{ old('price') }}">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="field">
-            <label for="price" class="label">Category</label>
+            <label for="price" class="label">Kategorija</label>
 
             <div class="select">
                 <select name="category_id">
@@ -47,7 +47,7 @@
 
         <div class="field">
             <div class="control">
-                <button type="submit" class="button is-link">Create A New Product</button>
+                <button type="submit" class="button is-link">Unesi proizvod</button>
             </div>
         </div>
     </form>

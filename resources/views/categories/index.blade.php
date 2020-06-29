@@ -2,14 +2,14 @@
 
 @section('content')
 
-    <br><br><h1 class="title">Categories</h1>
+    <br><br><h1 class="title">Kategorije</h1>
 
     @include('message')
 
     <br>
     <div class="displayItems" style="color: #9d0006">
-        <div class="name">Name</div>
-        <div class="description">Description</div>
+        <div class="name">Naziv</div>
+        <div class="description">Opis</div>
     </div>
     <br>
     @foreach($category as $item)
