@@ -28,8 +28,8 @@ class HomeController extends Controller
 
         $monthChart = new MonthYearCharts;
         $monthChart->labels(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
-        $monthChart->dataset('Arrival Date Over Year', 'bar', $arrivalMonth);
-        $monthChart->dataset('Created User Over Year', 'line', $userMonth);
+        $monthChart->dataset('Mesečna statistika Dostava robe', 'bar', $arrivalMonth);
+        $monthChart->dataset('Mesečna statistika Zaposlenih', 'line', $userMonth);
         $monthChart->barWidth(0.6);
 
         //Section For Year Chart
@@ -42,8 +42,8 @@ class HomeController extends Controller
 
         $yearChart = new MonthYearCharts;
         $yearChart->labels(['2016', '2017', '2018', '2019', '2020']);
-        $yearChart->dataset('Arrival Date Over Year', 'bar', $arrivalYear);
-        $yearChart->dataset('Created User Over Year', 'line', $userYear);
+        $yearChart->dataset('Godišnja statistika Dostava robe', 'bar', $arrivalYear);
+        $yearChart->dataset('Godišnja statistika Zaposlenih', 'line', $userYear);
         $yearChart->barWidth(0.6);
 
         return view('home', compact(['monthChart', 'yearChart']));
