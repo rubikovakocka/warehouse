@@ -1,5 +1,3 @@
-<h1>Search Filter</h1>
-
 <div class="field">
     <div class="control">
         <label class="label" for="product">Product</label>

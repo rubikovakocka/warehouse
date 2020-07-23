@@ -1,9 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title></title>
+    <title>Magacinko</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
     <style>
+
+
+
         .displayItems {
             display: flex;
             padding: 5px;
@@ -18,7 +21,7 @@
         }
 
         .name {width: 250px;}
-        .description {width: calc(100% - 450px)}
+        .description {width: calc(100% - 450px)}k
         .stock, .price {width: 80px;}
         .address, .city, .phone {width: 460px;}
         .category {width: 300px;}
@@ -27,7 +30,32 @@
         .expireDate {font-weight: bold; text-decoration: red underline}
         .product, .supplier, .employee, .warehouse {width: 16.5%;}
 
-        .search{display:flex;}
+        .search{display:flex; justify-content: center; align-items: center;}
+
+        .flex,
+        .row {
+            display: flex;
+        }
+
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        .col {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .box {
+            background: #e3e3e3;
+            height: 50px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+        }
+        
         .numInput{width: 200px; margin-right: 25px;}
          h1 {margin: 0; padding: 15px; font-weight: bold; font-size: 22px;}
 
@@ -46,7 +74,6 @@
 
         .inlineInfo > label {width: 33%;}
 
-        .select {display: block;}
         .dropdowns {width: 100%; display: flex; justify-content: center;}
         .dropdowns .label {margin-right: 15px;}
         .numInputRow {width: 100%; display: flex;}
