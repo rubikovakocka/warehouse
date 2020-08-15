@@ -39,9 +39,11 @@ class CategoriesController extends Controller
 
         $columnNames = ['name', 'description'];
 
+        $columnPlaces = ['ime', 'opis'];
+
         $searchValue = $request->search;
 
-        return view('categories.index', compact(['category', 'columnNames', 'searchValue']));
+        return view('categories.index', compact(['category', 'columnNames', 'columnPlaces', 'searchValue']));
     }
 
     /**

@@ -27,7 +27,7 @@ class HomeController extends Controller
         }
 
         $monthChart = new MonthYearCharts;
-        $monthChart->labels(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+        $monthChart->labels(['Januar', 'Februar', 'Mart', 'April', 'Maj', 'Jun', 'Jul', 'Avgust', 'Septembar', 'Oktobar', 'Novembar', 'Decembar']);
         $monthChart->dataset('Mesečna statistika Dostava robe', 'bar', $arrivalMonth);
         $monthChart->dataset('Mesečna statistika Zaposlenih', 'line', $userMonth);
         $monthChart->barWidth(0.6);
