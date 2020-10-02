@@ -61,7 +61,7 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      * Default role when creating a new user is employee.
-     * Only admin and
+     * Only admin and manager can create a new user.
      *
      * @param array $data
      * @return User
@@ -74,7 +74,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);
+        ])
+            ->roles()->attach(config('auth.defaults.role'));
 
         return $user;
     }

@@ -4,7 +4,7 @@
     <br><h1 class="title">{{ $product->name }}</h1>
 
     <div class="showContent">
-        <label for="name" class="label">Naziv proizvoda</label>
+        <label for="name" class="label">Opis proizvoda</label>
         <div class="content">{{ $product->description }}</div>
 
         <label for="stock" class="label">Zaliha</label>

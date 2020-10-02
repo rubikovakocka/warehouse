@@ -22,12 +22,19 @@ class HomeController extends Controller
         for ($i=1; $i<=12; $i++) {
             $monthDate = Carbon::today();
             $monthBefore = $monthDate->subMonth($i);
-            $arrivalMonth[] = Arrival::whereBetween('arrival_date', [$monthBefore, $todayDate])->get('arrival_date')->count();
-            $userMonth[] = User::whereBetween('created_at', [$monthBefore, $todayDate])->get('created_at')->count();
+            $arrivalMonth[] = Arrival::whereBetween('arrival_date', [$monthBefore, $todayDate])
+                ->get('arrival_date')
+                ->count();
+            $userMonth[] = User::whereBetween('created_at', [$monthBefore, $todayDate])
+                ->get('created_at')
+                ->count();
         }
 
         $monthChart = new MonthYearCharts;
-        $monthChart->labels(['Januar', 'Februar', 'Mart', 'April', 'Maj', 'Jun', 'Jul', 'Avgust', 'Septembar', 'Oktobar', 'Novembar', 'Decembar']);
+        $monthChart->labels(
+            ['Januar', 'Februar', 'Mart', 'April', 'Maj', 'Jun',
+            'Jul', 'Avgust', 'Septembar', 'Oktobar', 'Novembar', 'Decembar']
+        );
         $monthChart->dataset('Mesečna statistika Dostava robe', 'bar', $arrivalMonth);
         $monthChart->dataset('Mesečna statistika Zaposlenih', 'line', $userMonth);
         $monthChart->barWidth(0.6);
@@ -36,8 +43,12 @@ class HomeController extends Controller
         for ($n=1; $n<=5; $n++) {
             $yearDate = Carbon::today();
             $yearBefore = $yearDate->subYear($n);
-            $arrivalYear[] = Arrival::whereBetween('arrival_date', [$yearBefore, $todayDate])->get('arrival_date')->count();
-            $userYear[] = User::whereBetween('created_at', [$yearBefore, $todayDate])->get('created_at')->count();
+            $arrivalYear[] = Arrival::whereBetween('arrival_date', [$yearBefore, $todayDate])
+                ->get('arrival_date')
+                ->count();
+            $userYear[] = User::whereBetween('created_at', [$yearBefore, $todayDate])
+                ->get('created_at')
+                ->count();
         }
 
         $yearChart = new MonthYearCharts;

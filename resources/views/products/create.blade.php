@@ -8,13 +8,16 @@
     <form method="POST" action="/products">
         @csrf
 
-        <div class="field">
-            <label for="name" class="label">Naziv proizvoda</label>
+        <div class="numInput">
+            <div class="field">
+                <label for="name" class="label">Naziv proizvoda</label>
 
-            <div class="control">
-                <input type="text" name="name" class="input {{ $errors->has('name') ? 'is-danger' : '' }}" value="{{ old('name') }}">
+                <div class="control">
+                    <input type="text" name="name" class="input {{ $errors->has('name') ? 'is-danger' : '' }}" value="{{ old('name') }}">
+                </div>
             </div>
         </div>
+        
 
         <div class="field">
             <label for="description" class="label">Opis</label>
@@ -25,14 +28,16 @@
             </div>
         </div>
 
-        <div class="field">
-            <label for="price" class="label">Cena</label>
+        <div class="numInput">
+            <div class="field">
+                <label for="price" class="label">Cena</label>
 
-            <div class="control">
-                <input type="number" name="price" class="input {{ $errors->has('price') ? 'is-danger' : '' }}" value="{{ old('price') }}">
+                <div class="control">
+                    <input type="number" name="price" class="input {{ $errors->has('price') ? 'is-danger' : '' }}" value="{{ old('price') }}">
+                </div>
             </div>
         </div>
-
+        
         <div class="field">
             <label for="price" class="label">Kategorija</label>
 

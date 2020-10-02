@@ -12,19 +12,39 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
-        $role_admin = new Role();
-        $role_admin->name = 'admin';
-        $role_admin->description = 'An admin have all privileges';
-        $role_admin->save();
+        DB::table('roles')->truncate();
 
-        $role_manager = new Role();
-        $role_manager->name = 'manager';
-        $role_manager->description = 'A manager have complete CRUD except arrivals. Arrivals are read-only.';
-        $role_manager->save();
+        $this->makeRoles([
+            'admin',
+            'manager',
+            'employee',
+        ]);
+    }
 
-        $role_employee = new Role();
-        $role_employee->name = 'employee';
-        $role_employee->description = 'An employee can only edit arrivals. Other things are read-only.';
-        $role_employee->save();
+    private function makeRoles(array $names)
+    {
+        foreach ($names as $name) {
+            $role = new Role();
+
+            $role->name = $name;
+
+            switch ($name) {
+                case 'admin':
+                    $role->description = 'An admin have all privileges';
+                    break;
+                case 'manager':
+                    $role->description = 'A manager have complete CRUD except arrivals. Arrivals are read-only.';
+                    break;
+                case 'employee':
+                    $role->description = 'An employee can only edit arrivals. Other things are read-only.';
+                    break;
+
+                default:
+                    $role->description = 'No description.';
+                    break;
+            }
+
+            $role->save();
+        }
     }
 }

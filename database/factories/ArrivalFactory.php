@@ -9,8 +9,8 @@ $factory->define(Arrival::class, function (Faker $faker) {
     \Bezhanov\Faker\ProviderCollectionHelper::addAllProvidersTo($faker);
 
     return array(
-        'arrival_date' => arrivalDate(2016, 2019),
-        'expire_date' => expireDate(2020, 2024),
+        'arrival_date' => arrivalDate(2016, 2020),
+        'expire_date' => expireDate(2021, 2024),
         'arrival_stock' => rand(50, 2000),
         'supplier_id' => \App\Supplier::inRandomOrder()->first()->id,
         'product_id' => \App\Product::inRandomOrder()->first()->id,

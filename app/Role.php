@@ -12,6 +12,15 @@ class Role extends Model
     public $timestamps = false;
 
     /**
+     * Where to redirect users after registration.
+     *
+     * @var string
+     */
+    protected $fillable = [
+        'id',
+    ];
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users()
