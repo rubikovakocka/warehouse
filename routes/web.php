@@ -22,7 +22,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/warehouses', 'WarehousesController')->middleware('roles:admin,manager');
     Route::resource('/employees', 'EmployeesController')->middleware('roles:admin,manager');
     Route::resource('/arrivals', 'ArrivalsController')->middleware('roles:admin,employee');
-    Route::get('/home', 'HomeController@index')->name('home')->middleware('roles:admin,manager');
+    Route::get('/home', 'HomeController@index')->name('home')->middleware('roles:admin,manager,employee');
 });
 
 Auth::routes(['verify' => true]);

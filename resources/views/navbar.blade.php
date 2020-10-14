@@ -2,7 +2,7 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            @if (!is_null(request()->user()) && !request()->user()->hasRole('employee'))
+            @if (!is_null(request()->user()))
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="/products">Proizvodi</a>
 
